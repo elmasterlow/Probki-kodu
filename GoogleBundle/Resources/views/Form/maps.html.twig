@@ -1,0 +1,37 @@
+{% block google_maps_type_widget %}
+
+    <div class="row" id="init-map">
+
+
+        <div class="col-md-6">
+            {{ form_row(form.children['country']) }}
+        </div>
+        <div class="col-md-6">
+            {{ form_row(form.children['postCode']) }}
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-md-4">
+            {{ form_row(form.children['city']) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(form.children['street']) }}
+        </div>
+        <div class="col-md-4">
+            {{ form_row(form.children['no']) }}
+        </div>
+    </div>
+
+    <button class="btn btn-success" type="button" id="check-on-map" name="btn_check_on_map" style="margin: 15px 0;"><i class="fa"></i> Check on map</button>
+
+    <div class="row" id="coords">
+        <div class="col-md-6">
+            {{ form_row(form.children[latitude_field]) }}
+        </div>
+        <div class="col-md-6">
+            {{ form_row(form.children[longitude_field]) }}
+        </div>
+    </div>
+
+    <div id="map" class="col-md-12"></div>
+
+{% endblock google_maps_type_widget %}
